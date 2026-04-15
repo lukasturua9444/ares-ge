@@ -15,6 +15,21 @@ export default function AboutPage() {
       { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     );
     document.querySelectorAll('.anim').forEach((el) => observer.observe(el));
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+      });
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('open');
+        });
+      });
+    }
   }, []);
 
   return (
@@ -41,6 +56,7 @@ export default function AboutPage() {
             </div>
             <a href="/contact" className="nav-cta">Get in touch</a>
           </div>
+                  <button className="hamburger" id="hamburger"><span></span><span></span><span></span></button>
         </div>
       </nav>
 

@@ -103,7 +103,7 @@ export default function Home() {
             </div>
             <div className="stat-item">
               <span className="stat-num">450K+</span>
-              <span className="stat-label">m\u00B2 designed</span>
+              <span className="stat-label">m² designed</span>
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ export default function Home() {
         <div className="wrap">
           <div className="section-label anim">What we do</div>
           <h2 className="section-title anim anim-d1">Full-cycle MEPF<br />engineering solutions</h2>
-          <p className="section-sub anim anim-d2">From initial design through final commissioning \u2014 we handle all four building service disciplines under one contract.</p>
+          <p className="section-sub anim anim-d2">From initial design through final commissioning — we handle all four building service disciplines under one contract.</p>
           <div className="services-grid">
             <div className="srv-card anim anim-d1">
               <div className="srv-icon">
@@ -168,7 +168,7 @@ export default function Home() {
               </div>
               <div className="val-card anim anim-d3">
                 <h4>Strategic impact</h4>
-                <p>Higher property value through better engineering. Brand protection for developers. Risk reduction \u2014 legal, reputational, and technical. Lower post-commissioning costs.</p>
+                <p>Higher property value through better engineering. Brand protection for developers. Risk reduction — legal, reputational, and technical. Lower post-commissioning costs.</p>
               </div>
             </div>
           </div>
@@ -180,14 +180,14 @@ export default function Home() {
         <div className="wrap">
           <div className="section-label anim">Selected projects</div>
           <h2 className="section-title anim anim-d1">From design to<br />commissioning</h2>
-          <p className="section-sub anim anim-d2">Residential complexes, commercial spaces, public buildings \u2014 across Tbilisi, Batumi, Kutaisi and beyond.</p>
+          <p className="section-sub anim anim-d2">Residential complexes, commercial spaces, public buildings — across Tbilisi, Batumi, Kutaisi and beyond.</p>
           <div className="projects-grid">
             {[
-              { name: 'Thalasa Group', location: 'Batumi \u2014 Residential complex', tags: ['Fire ventilation', 'Electrical', 'Plumbing'] },
-              { name: 'Shopping Mall Kutaisi', location: 'Kutaisi \u2014 Commercial facility', tags: ['Full MEPF', 'Automation'] },
-              { name: 'Archi Iasamnebi', location: 'Tbilisi \u2014 Residential complex', tags: ['Fire alarm', 'Sprinkler'] },
+              { name: 'Thalasa Group', location: 'Batumi — Residential complex', tags: ['Fire ventilation', 'Electrical', 'Plumbing'] },
+              { name: 'Shopping Mall Kutaisi', location: 'Kutaisi — Commercial facility', tags: ['Full MEPF', 'Automation'] },
+              { name: 'Archi Iasamnebi', location: 'Tbilisi — Residential complex', tags: ['Fire alarm', 'Sprinkler'] },
             ].map((proj, i) => (
-              <div className={\`proj-card anim anim-d\${i + 1}\`} key={proj.name}>
+              <div className={`proj-card anim anim-d${i + 1}`} key={proj.name}>
                 <div className="proj-img">
                   <div className="proj-overlay"></div>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: 'var(--text3)', fontSize: '12px' }}>Project photo</div>
@@ -280,4 +280,4 @@ export default function Home() {
       </footer>
     </>
   );
-        }
+}

@@ -29,6 +29,7 @@ export default function PartnersPage() {
           <a href="/" className="nav-logo"><img src="/images/ARES_White_Horizontal.png" alt="ARES" /></a>
           <div className="nav-links"><a href="/services">Services</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/partners" className="active-link">Partners</a><a href="/certifications">Certifications</a><a href="/contact">Contact</a></div>
           <div className="nav-right"><div className="lang-sw"><a href="/ka/">GE</a><a href="/" className="active">EN</a><a href="/ru/">RU</a></div><a href="/contact" className="nav-cta">Get in touch</a></div>
+          <button className="hamburger" id="hamburger"><span></span><span></span><span></span></button>
         </div>
       </nav>
 

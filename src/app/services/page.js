@@ -1,7 +1,9 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function ServicesPage() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -40,7 +42,15 @@ export default function ServicesPage() {
             <div className="lang-sw"><a href="/ka/">GE</a><a href="/" className="active">EN</a><a href="/ru/">RU</a></div>
             <a href="/contact" className="nav-cta">Get in touch</a>
           </div>
-          <button className="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+          <button
+            type="button"
+            className={`hamburger${menuOpen ? ' active' : ''}`}
+            id="hamburger"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </nav>
 

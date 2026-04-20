@@ -1,7 +1,9 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function AboutPage() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -16,21 +18,7 @@ export default function AboutPage() {
     );
     document.querySelectorAll('.anim').forEach((el) => observer.observe(el));
 
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    if (hamburger && navLinks) {
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('open');
-      });
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('active');
-          navLinks.classList.remove('open');
-        });
-      });
-    }
-  }, []);
+    , []);
 
   return (
     <>
@@ -56,7 +44,15 @@ export default function AboutPage() {
             </div>
             <a href="/contact" className="nav-cta">Get in touch</a>
           </div>
-                  <button className="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+                  <button
+            type="button"
+            className={`hamburger${menuOpen ? ' active' : ''}`}
+            id="hamburger"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </nav>
 

@@ -1,16 +1,12 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-export const metadata = {
-  title: 'Projects',
-  description: 'ARES portfolio: 20+ completed MEPF projects across Tbilisi, Batumi, Kutaisi, Rustavi. Residential, commercial, and public buildings.',
-};
-
 export default function ProjectsPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleNavClick = () => setMenuOpen(false);
 
   useEffect(() => {
+    document.title = 'Projects | ARES';
     if (menuOpen) {
       document.body.classList.add('menu-open');
     } else {

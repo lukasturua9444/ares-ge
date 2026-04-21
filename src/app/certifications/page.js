@@ -1,16 +1,12 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-export const metadata = {
-  title: 'Certifications',
-  description: 'ARES engineering standards: ISO 9001, NFPA, IEC, ASHRAE, EN Standards. Compliance at every stage from design to commissioning.',
-};
-
 export default function CertificationsPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleNavClick = () => setMenuOpen(false);
 
   useEffect(() => {
+    document.title = 'Certifications | ARES';
     if (menuOpen) {
       document.body.classList.add('menu-open');
     } else {

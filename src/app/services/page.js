@@ -1,16 +1,12 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-export const metadata = {
-  title: 'Services',
-  description: 'Full-cycle MEPF engineering: HVAC, electrical, plumbing, fire safety, low voltage ELV, testing & commissioning. One contractor for all disciplines.',
-};
-
 export default function ServicesPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleNavClick = () => setMenuOpen(false);
 
   useEffect(() => {
+    document.title = 'Services | ARES';
     if (menuOpen) {
       document.body.classList.add('menu-open');
     } else {

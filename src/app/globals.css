@@ -412,3 +412,83 @@ body.menu-open .wrap {
   position: static !important;
   z-index: auto !important;
 }
+
+
+/* Mobile responsive overrides for inline grid styles */
+@media (max-width: 600px) {
+  /* Force all inline grids to single column on mobile */
+  .section div[style*="gridTemplateColumns"],
+  .section div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Service detail cards - stack columns */
+  .service-detail div[style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Contact page form + info */
+  .section > .wrap > div[style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* Partner grid */
+  .services-grid[style*="repeat(3"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Project cards grid */
+  div[style*="repeat(2, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Value grid adjustments */
+  .value-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* About grid */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Page headers - smaller padding */
+  .page-header {
+    padding: 100px 0 32px !important;
+  }
+  
+  .page-title {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+  }
+
+  .section-title {
+    font-size: 24px !important;
+  }
+
+  /* Hero adjustments */
+  .hero h1 {
+    font-size: 32px !important;
+    line-height: 1.15 !important;
+  }
+
+  .hero-sub {
+    font-size: 14px !important;
+  }
+
+  .hero-btns {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .hero-btns a {
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .services-grid[style*="repeat(3"] {
+    grid-template-columns: 1fr !important;
+  }
+}

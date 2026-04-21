@@ -29,8 +29,8 @@ export default function ServicesPage() {
 
   const services = [
     { title: 'HVAC Systems', desc: 'Design and installation of heating, ventilation, and air conditioning systems. Climate control engineered for efficiency, comfort, and energy performance.', items: ['Central heating systems', 'Ventilation design', 'Air conditioning', 'Energy-efficient climate control', 'Indoor air quality management'] },
-    { title: 'Electrical Systems', desc: 'Energy distribution, emergency and backup systems, grounding, and lightning protection. Complete electrical infrastructure for modern buildings.', items: ['Power distribution networks', 'Emergency/backup systems', 'Grounding & lightning protection', 'Lighting design', 'Switchgear & panels'] },
-    { title: 'Plumbing & Drainage', desc: 'Water supply, drainage, and rainwater systems. Designed for reliability, efficiency, and full regulatory compliance.', items: ['Water supply systems', 'Drainage networks', 'Sewerage systems', 'Rainwater management', 'Irrigation systems'] },
+    { title: 'Electrical Systems', desc: 'Energy distribution, emergency and backup systems, grounding, and lightning protection. Complete electrical infrastructure for modern buildings.', items: ['Power distribution networks', 'Emergency/backup systems', 'Grounding & lightning protection', 'Lighting systems', 'Switchgear & panels'] },
+    { title: 'Plumbing & Drainage', desc: 'Water supply, drainage, and rainwater systems. Designed for reliability, efficiency, and full regulatory compliance.', items: ['Water supply systems', 'Drainage networks', 'Sewerage systems', 'Rainwater management'] },
     { title: 'Fire Safety', desc: 'Fire detection and alarm, sprinkler, smoke control, and emergency evacuation systems, in full compliance with international standards.', items: ['Fire alarm systems', 'Automatic sprinklers', 'Smoke control & ventilation', 'Evacuation systems', 'Fire automation'] },
     { title: 'Low Voltage & ELV Systems', desc: 'Access control, CCTV, structured cabling, BMS integration, and communication infrastructure for intelligent buildings.', items: ['Access control systems', 'CCTV & surveillance', 'Structured cabling', 'BMS integration', 'Sound & communication systems'] },
     { title: 'Testing & Commissioning', desc: 'System performance verification, functional testing, startup, and final handover. Ensuring every system operates as designed.', items: ['Performance verification', 'Functional testing', 'System startup', 'Final handover', 'Documentation & training'] }
@@ -61,7 +61,7 @@ export default function ServicesPage() {
         <div className="wrap">
           <div className="section-label anim">Services</div>
           <h1 className="page-title anim anim-d1">Full-cycle MEPF<br /><em>engineering solutions</em></h1>
-          <p className="section-sub anim anim-d2">From initial design through final commissioning — we handle all building service disciplines under one contract.</p>
+          <p className="section-sub anim anim-d2">From initial design through final commissioning — we handle all four engineering disciplines under one contract.</p>
         </div>
       </section>
 

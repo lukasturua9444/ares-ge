@@ -28,13 +28,13 @@ export default function AboutPage() {
           <a href="/" className="nav-logo">
             <img src="/images/ARES_White_Horizontal.png" alt="ARES" />
           </a>
-          <div className="nav-links">
-            <a href="/services">Services</a>
-            <a href="/about" className="active-link">About Us</a>
-            <a href="/projects">Projects</a>
-            <a href="/partners">Partners</a>
-            <a href="/certifications">Certifications</a>
-            <a href="/contact">Contact</a>
+          <div className={`nav-links${menuOpen ? ' open' : ''}`}>
+            <a href="/services" onClick={handleNavClick}>Services</a>
+            <a href="/about" className="active-link" onClick={handleNavClick}>About Us</a>
+            <a href="/projects" onClick={handleNavClick}>Projects</a>
+            <a href="/partners" onClick={handleNavClick}>Partners</a>
+            <a href="/certifications" onClick={handleNavClick}>Certifications</a>
+            <a href="/contact" onClick={handleNavClick}>Contact</a>
           </div>
           <div className="nav-right">
             <div className="lang-sw">
@@ -141,7 +141,7 @@ export default function AboutPage() {
             </div>
             <div className="footer-col">
               <h4>Navigation</h4>
-              <a href="/services">Services</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/partners">Partners</a><a href="/contact">Contact</a>
+              <a href="/services" onClick={handleNavClick}>Services</a><a href="/about" onClick={handleNavClick}>About Us</a><a href="/projects" onClick={handleNavClick}>Projects</a><a href="/partners" onClick={handleNavClick}>Partners</a><a href="/contact" onClick={handleNavClick}>Contact</a>
             </div>
             <div className="footer-col">
               <h4>Services</h4>

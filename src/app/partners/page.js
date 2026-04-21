@@ -29,7 +29,7 @@ export default function PartnersPage() {
       <nav className="nav" id="nav">
         <div className="nav-inner">
           <a href="/" className="nav-logo"><img src="/images/ARES_White_Horizontal.png" alt="ARES" /></a>
-          <div className="nav-links"><a href="/services">Services</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/partners" className="active-link">Partners</a><a href="/certifications">Certifications</a><a href="/contact">Contact</a></div>
+          <div className={`nav-links${menuOpen ? ' open' : ''}`}><a href="/services" onClick={handleNavClick}>Services</a><a href="/about" onClick={handleNavClick}>About Us</a><a href="/projects" onClick={handleNavClick}>Projects</a><a href="/partners" className="active-link" onClick={handleNavClick}>Partners</a><a href="/certifications" onClick={handleNavClick}>Certifications</a><a href="/contact" onClick={handleNavClick}>Contact</a></div>
           <div className="nav-right"><div className="lang-sw"><a href="/ka/">GE</a><a href="/" className="active">EN</a><a href="/ru/">RU</a></div><a href="/contact" className="nav-cta">Get in touch</a></div>
           <button
             type="button"
@@ -96,7 +96,7 @@ export default function PartnersPage() {
         <div className="wrap">
           <div className="footer-grid">
             <div><div className="footer-brand"><img src="/images/ARES_White_Horizontal.png" alt="ARES" /></div><p className="footer-desc">Integrated MEPF engineering solutions for developers and construction companies across Georgia.</p></div>
-            <div className="footer-col"><h4>Navigation</h4><a href="/services">Services</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/partners">Partners</a><a href="/contact">Contact</a></div>
+            <div className="footer-col"><h4>Navigation</h4><a href="/services" onClick={handleNavClick}>Services</a><a href="/about" onClick={handleNavClick}>About Us</a><a href="/projects" onClick={handleNavClick}>Projects</a><a href="/partners" onClick={handleNavClick}>Partners</a><a href="/contact" onClick={handleNavClick}>Contact</a></div>
             <div className="footer-col"><h4>Services</h4><a href="/services">Mechanical</a><a href="/services">Electrical</a><a href="/services">Plumbing</a><a href="/services">Fire protection</a></div>
             <div className="footer-col footer-contact"><h4>Contact</h4><p><a href="mailto:info@ares.ge">info@ares.ge</a></p><p><a href="tel:+995595396139">+995 595 39 61 39</a></p><p>8 S. Virsaladze Street<br />Tbilisi 0108, Georgia</p></div>
           </div>

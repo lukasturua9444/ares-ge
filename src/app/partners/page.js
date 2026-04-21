@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 export default function PartnersPage() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('v'); observer.unobserve(entry.target); } }); },
@@ -23,6 +22,8 @@ export default function PartnersPage() {
     { name: 'Compact Mukhiani', type: 'Developer', location: 'Tbilisi' },
     { name: 'Baustar', type: 'Developer', location: 'Rustavi' },
   ];
+
+  const handleNavClick = () => setMenuOpen(false);
 
   return (
     <>
@@ -97,7 +98,7 @@ export default function PartnersPage() {
           <div className="footer-grid">
             <div><div className="footer-brand"><img src="/images/ARES_White_Horizontal.png" alt="ARES" /></div><p className="footer-desc">Integrated MEPF engineering solutions for developers and construction companies across Georgia.</p></div>
             <div className="footer-col"><h4>Navigation</h4><a href="/services" onClick={handleNavClick}>Services</a><a href="/about" onClick={handleNavClick}>About Us</a><a href="/projects" onClick={handleNavClick}>Projects</a><a href="/partners" onClick={handleNavClick}>Partners</a><a href="/contact" onClick={handleNavClick}>Contact</a></div>
-            <div className="footer-col"><h4>Services</h4><a href="/services">Mechanical</a><a href="/services">Electrical</a><a href="/services">Plumbing</a><a href="/services">Fire protection</a></div>
+            <div className="footer-col"><h4>Services</h4><a href="/services" onClick={handleNavClick}>Mechanical</a><a href="/services" onClick={handleNavClick}>Electrical</a><a href="/services" onClick={handleNavClick}>Plumbing</a><a href="/services" onClick={handleNavClick}>Fire protection</a></div>
             <div className="footer-col footer-contact"><h4>Contact</h4><p><a href="mailto:info@ares.ge">info@ares.ge</a></p><p><a href="tel:+995595396139">+995 595 39 61 39</a></p><p>8 S. Virsaladze Street<br />Tbilisi 0108, Georgia</p></div>
           </div>
           <div className="footer-bottom"><p>&copy; 2026 ARES. All rights reserved.</p><p>MEPF Engineering Solutions</p></div>

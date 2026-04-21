@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -21,22 +20,9 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll);
 
     // Mobile hamburger menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    if (hamburger && navLinks) {
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('open');
-      });
-      // Close menu when a link is clicked
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('active');
-          navLinks.classList.remove('open');
-        });
-      });
-    }
-    return () => window.removeEventListener('scroll', handleScroll);
+    const handleNavClick = () => setMenuOpen(false);
+
+  return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -182,7 +168,7 @@ export default function Home() {
         <div className="footer-grid">
           <div><div className="footer-brand"><img src="/images/ARES_White_Horizontal.png" alt="ARES" /></div><p className="footer-desc">Integrated MEPF engineering solutions for developers and construction companies across Georgia. From design to commissioning.</p></div>
           <div className="footer-col"><h4>Navigation</h4><a href="/services" onClick={handleNavClick}>Services</a><a href="/about" onClick={handleNavClick}>About Us</a><a href="/projects" onClick={handleNavClick}>Projects</a><a href="/partners" onClick={handleNavClick}>Partners</a><a href="/contact" onClick={handleNavClick}>Contact</a></div>
-          <div className="footer-col"><h4>Services</h4><a href="/services">Mechanical</a><a href="/services">Electrical</a><a href="/services">Plumbing</a><a href="/services">Fire protection</a></div>
+          <div className="footer-col"><h4>Services</h4><a href="/services" onClick={handleNavClick}>Mechanical</a><a href="/services" onClick={handleNavClick}>Electrical</a><a href="/services" onClick={handleNavClick}>Plumbing</a><a href="/services" onClick={handleNavClick}>Fire protection</a></div>
           <div className="footer-col footer-contact"><h4>Contact</h4><p><a href="mailto:info@ares.ge">info@ares.ge</a></p><p><a href="tel:+995595396139">+995 595 39 61 39</a></p><p>8 S. Virsaladze Street<br />Tbilisi 0108, Georgia</p></div>
         </div>
         <div className="footer-bottom"><p>&copy; 2026 ARES. All rights reserved.</p><p>MEPF Engineering Solutions</p></div>

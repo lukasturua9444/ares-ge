@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 export default function AboutPage() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -17,8 +16,9 @@ export default function AboutPage() {
       { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     );
     document.querySelectorAll('.anim').forEach((el) => observer.observe(el));
+  }, []);
 
-    , []);
+  const handleNavClick = () => setMenuOpen(false);
 
   return (
     <>
@@ -145,7 +145,7 @@ export default function AboutPage() {
             </div>
             <div className="footer-col">
               <h4>Services</h4>
-              <a href="/services">Mechanical</a><a href="/services">Electrical</a><a href="/services">Plumbing</a><a href="/services">Fire protection</a>
+              <a href="/services" onClick={handleNavClick}>Mechanical</a><a href="/services" onClick={handleNavClick}>Electrical</a><a href="/services" onClick={handleNavClick}>Plumbing</a><a href="/services" onClick={handleNavClick}>Fire protection</a>
             </div>
             <div className="footer-col footer-contact">
               <h4>Contact</h4>

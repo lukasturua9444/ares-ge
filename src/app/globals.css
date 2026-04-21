@@ -88,7 +88,7 @@ img { max-width: 100%; display: block; }
   background-size: 60px 60px;
 }
 .hero-inner {
-  position: relative; z-index: 2; max-width: var(--max); margin: 0 auto;
+  position: relative;  max-width: var(--max); margin: 0 auto;
   padding: 80px 24px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center;
 }
 .hero-label {
@@ -135,7 +135,7 @@ img { max-width: 100%; display: block; }
 .hero-badge .num { font-size: 28px; font-weight: 700; color: var(--black); }
 .hero-badge .lab { font-size: 11px; color: rgba(0,0,0,0.6); }
 
-.stats { padding: 0 0 80px; position: relative; z-index: 2; margin-top: -40px; }
+.stats { padding: 0 0 80px; position: relative;  margin-top: -40px; }
 .stats-grid {
   max-width: 800px; margin: 0 auto;
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -332,7 +332,7 @@ footer {
   background: linear-gradient(160deg, rgba(232,68,30,0.06) 0%, transparent 40%);
   pointer-events: none;
 }
-.page-header .wrap { position: relative; z-index: 2; }
+.page-header .wrap { position: relative;  }
 .page-title {
   font-size: clamp(32px, 4.5vw, 56px);
   font-weight: 700;
@@ -369,7 +369,7 @@ footer {
   background: #050505;
   padding: 32px 24px;
   gap: 0;
-  z-index: 998;
+  z-index: 999;
   animation: menuSlide 0.3s ease;
   overflow-y: auto;
 }

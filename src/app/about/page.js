@@ -1,6 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
 
+export const metadata = {
+  title: 'About Us',
+  description: 'ARES — MEPF engineering company founded in 2024 with team experience since 2017. 20+ projects, 450K+ m² designed across Georgia.',
+};
+
 export default function AboutPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleNavClick = () => setMenuOpen(false);

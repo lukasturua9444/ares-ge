@@ -1,6 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
 
+export const metadata = {
+  title: 'Partners',
+  description: 'ARES development partners and clients: leading construction companies across Georgia including Thalasa Group, M1 Group, Archi, and more.',
+};
+
 export default function PartnersPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleNavClick = () => setMenuOpen(false);

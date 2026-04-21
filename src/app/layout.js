@@ -1,14 +1,25 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'ARES \u2014 MEPF Engineering Solutions | Georgia',
-  description: 'ARES delivers integrated Mechanical, Electrical, Plumbing & Fire Protection engineering solutions for developers across Georgia. 8+ years experience, 20+ projects, 450K+ m\u00B2 designed.',
-  keywords: 'MEPF engineering, mechanical engineering Georgia, electrical engineering Tbilisi, plumbing, fire protection',
+  title: {
+    default: 'ARES — MEPF Engineering Solutions | Georgia',
+    template: '%s | ARES'
+  },
+  description: 'Integrated mechanical, electrical, plumbing & fire protection engineering solutions for developers and construction companies across Georgia. Design, installation, commissioning.',
+  keywords: ['MEPF', 'engineering', 'Georgia', 'Tbilisi', 'mechanical', 'electrical', 'plumbing', 'fire protection', 'HVAC', 'construction'],
+  authors: [{ name: 'ARES' }],
+  icons: {
+    icon: '/favicon.png',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
-    title: 'ARES \u2014 MEPF Engineering Solutions',
-    description: 'Integrated mechanical, electrical, plumbing & fire protection solutions for developers across Georgia.',
-    url: 'https://ares.ge',
+    title: 'ARES — MEPF Engineering Solutions',
+    description: 'Integrated MEPF engineering for developers and construction companies across Georgia.',
+    url: 'https://ares-ge.vercel.app',
+    siteName: 'ARES',
+    locale: 'en_US',
     type: 'website',
+    images: [{ url: '/images/ARES_On_Square.png', width: 1080, height: 1080, alt: 'ARES Logo' }],
   },
 };
 

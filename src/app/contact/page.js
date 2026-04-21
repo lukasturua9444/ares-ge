@@ -1,6 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
 
+export const metadata = {
+  title: 'Contact',
+  description: 'Get in touch with ARES for MEPF engineering consultation. Email: info@ares.ge, Phone: +995 595 39 61 39, Tbilisi, Georgia.',
+};
+
 export default function ContactPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleNavClick = () => setMenuOpen(false);

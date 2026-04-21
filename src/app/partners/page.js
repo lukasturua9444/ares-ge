@@ -41,7 +41,7 @@ export default function PartnersPage() {
         <div className="nav-inner">
           <a href="/" className="nav-logo"><img src="/images/ARES_White_Horizontal.png" alt="ARES" /></a>
           <div className={`nav-links${menuOpen ? ' open' : ''}`}><a href="/services" onClick={handleNavClick}>Services</a><a href="/about" onClick={handleNavClick}>About Us</a><a href="/projects" onClick={handleNavClick}>Projects</a><a href="/partners" className="active-link" onClick={handleNavClick}>Partners</a><a href="/certifications" onClick={handleNavClick}>Certifications</a><a href="/contact" onClick={handleNavClick}>Contact</a></div>
-          <div className="nav-right"><div className="lang-sw"><a href="/ka/">GE</a><a href="/" className="active">EN</a><a href="/ru/">RU</a></div><a href="/contact" className="nav-cta">Get in touch</a></div>
+          <div className="nav-right"><div className="lang-sw"><a href="/ka/partners">GE</a><a href="/partners" className="active">EN</a></div><a href="/contact" className="nav-cta">Get in touch</a></div>
           <button type="button" className={`hamburger${menuOpen ? ' active' : ''}`} id="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu"><span></span><span></span><span></span></button>
         </div>
       </nav>

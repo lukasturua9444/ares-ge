@@ -63,7 +63,7 @@ export default function Home() {
             <a href="/contact" onClick={handleNavClick}>Contact</a>
           </div>
           <div className="nav-right">
-            <div className="lang-sw"><a href="/ka/">GE</a><a href="/" className="active">EN</a><a href="/ru/">RU</a></div>
+            <div className="lang-sw"><a href="/ka">GE</a><a href="/" className="active">EN</a></div>
             <a href="/contact" className="nav-cta">Get in touch</a>
           </div>
           <button type="button" className={`hamburger${menuOpen ? ' active' : ''}`} id="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu"><span></span><span></span><span></span></button>

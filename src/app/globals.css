@@ -356,16 +356,14 @@ footer {
   display: flex !important;
   flex-direction: column;
   position: fixed;
-  top: 64px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(5,5,5,0.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 32px 24px;
-  gap: 8px;
-  z-index: 99;
+  background: #050505;
+  padding: 100px 24px 32px;
+  gap: 0;
+  z-index: 999;
   animation: menuSlide 0.3s ease;
 }
 .nav-links.open a {

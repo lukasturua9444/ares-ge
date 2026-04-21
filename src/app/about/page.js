@@ -1,8 +1,7 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 export default function AboutPage() {
-  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -16,9 +15,22 @@ export default function AboutPage() {
       { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     );
     document.querySelectorAll('.anim').forEach((el) => observer.observe(el));
-  }, []);
 
-  const handleNavClick = () => setMenuOpen(false);
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+      });
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('open');
+        });
+      });
+    }
+  }, []);
 
   return (
     <>
@@ -28,13 +40,13 @@ export default function AboutPage() {
           <a href="/" className="nav-logo">
             <img src="/images/ARES_White_Horizontal.png" alt="ARES" />
           </a>
-          <div className={`nav-links${menuOpen ? ' open' : ''}`}>
-            <a href="/services" onClick={handleNavClick}>Services</a>
-            <a href="/about" className="active-link" onClick={handleNavClick}>About Us</a>
-            <a href="/projects" onClick={handleNavClick}>Projects</a>
-            <a href="/partners" onClick={handleNavClick}>Partners</a>
-            <a href="/certifications" onClick={handleNavClick}>Certifications</a>
-            <a href="/contact" onClick={handleNavClick}>Contact</a>
+          <div className="nav-links">
+            <a href="/services">Services</a>
+            <a href="/about" className="active-link">About Us</a>
+            <a href="/projects">Projects</a>
+            <a href="/partners">Partners</a>
+            <a href="/certifications">Certifications</a>
+            <a href="/contact">Contact</a>
           </div>
           <div className="nav-right">
             <div className="lang-sw">
@@ -44,15 +56,7 @@ export default function AboutPage() {
             </div>
             <a href="/contact" className="nav-cta">Get in touch</a>
           </div>
-                  <button
-            type="button"
-            className={`hamburger${menuOpen ? ' active' : ''}`}
-            id="hamburger"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            <span></span><span></span><span></span>
-          </button>
+                  <button className="hamburger" id="hamburger"><span></span><span></span><span></span></button>
         </div>
       </nav>
 
@@ -141,11 +145,11 @@ export default function AboutPage() {
             </div>
             <div className="footer-col">
               <h4>Navigation</h4>
-              <a href="/services" onClick={handleNavClick}>Services</a><a href="/about" onClick={handleNavClick}>About Us</a><a href="/projects" onClick={handleNavClick}>Projects</a><a href="/partners" onClick={handleNavClick}>Partners</a><a href="/contact" onClick={handleNavClick}>Contact</a>
+              <a href="/services">Services</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/partners">Partners</a><a href="/contact">Contact</a>
             </div>
             <div className="footer-col">
               <h4>Services</h4>
-              <a href="/services" onClick={handleNavClick}>Mechanical</a><a href="/services" onClick={handleNavClick}>Electrical</a><a href="/services" onClick={handleNavClick}>Plumbing</a><a href="/services" onClick={handleNavClick}>Fire protection</a>
+              <a href="/services">Mechanical</a><a href="/services">Electrical</a><a href="/services">Plumbing</a><a href="/services">Fire protection</a>
             </div>
             <div className="footer-col footer-contact">
               <h4>Contact</h4>

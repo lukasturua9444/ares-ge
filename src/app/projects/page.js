@@ -1,8 +1,7 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 export default function ProjectsPage() {
-  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('v'); observer.unobserve(entry.target); } }); },
@@ -26,22 +25,12 @@ export default function ProjectsPage() {
     { name: 'Vashlovani School and Campus', location: 'Vashlovani', type: 'Public building', img: '/images/proj-vashlovani.jpg', tags: ['Fire ventilation', 'Fire alarm', 'Evacuation', 'Sprinkler', 'Automation', 'Electrical'] },
   ];
 
-  const handleNavClick = () => setMenuOpen(false);
-
   return (<>
     <nav className="nav" id="nav"><div className="nav-inner">
       <a href="/" className="nav-logo"><img src="/images/ARES_White_Horizontal.png" alt="ARES" /></a>
-      <div className={`nav-links${menuOpen ? ' open' : ''}`}><a href="/services" onClick={handleNavClick}>Services</a><a href="/about" onClick={handleNavClick}>About Us</a><a href="/projects" className="active-link" onClick={handleNavClick}>Projects</a><a href="/partners" onClick={handleNavClick}>Partners</a><a href="/certifications" onClick={handleNavClick}>Certifications</a><a href="/contact" onClick={handleNavClick}>Contact</a></div>
+      <div className="nav-links"><a href="/services">Services</a><a href="/about">About Us</a><a href="/projects" className="active-link">Projects</a><a href="/partners">Partners</a><a href="/certifications">Certifications</a><a href="/contact">Contact</a></div>
       <div className="nav-right"><div className="lang-sw"><a href="/ka/">GE</a><a href="/" className="active">EN</a><a href="/ru/">RU</a></div><a href="/contact" className="nav-cta">Get in touch</a></div>
-          <button
-            type="button"
-            className={`hamburger${menuOpen ? ' active' : ''}`}
-            id="hamburger"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            <span></span><span></span><span></span>
-          </button>
+          <button className="hamburger" id="hamburger"><span></span><span></span><span></span></button>
         </div>
       </nav>
     <section className="page-header"><div className="wrap"><div className="section-label anim">Projects</div><h1 className="page-title anim anim-d1">From design to<br /><em>commissioning</em></h1><p className="section-sub anim anim-d2">Residential complexes, commercial spaces, public buildings — across Tbilisi, Batumi, Kutaisi and beyond.</p></div></section>
@@ -52,6 +41,6 @@ export default function ProjectsPage() {
       </div></div></section>
     <section className="section services"><div className="wrap" style={{ textAlign: 'center' }}><div className="section-label anim center">Geography</div><h2 className="section-title anim anim-d1" style={{ margin: '0 auto 8px' }}>Active across Georgia</h2><p className="section-sub anim anim-d2" style={{ margin: '0 auto 48px' }}>We deliver projects wherever they are needed.</p><div className="certs-grid anim anim-d3">{['Tbilisi', 'Batumi', 'Kutaisi', 'Rustavi', 'Kvareli', 'Vashlovani'].map((city) => (<div className="cert-item" key={city}><span>{city}</span></div>))}</div></div></section>
     <section className="cta-section"><div className="wrap"><div className="cta-box anim"><h2>Have a project in mind?</h2><p>Get a consultation and preliminary cost estimate for your development</p><div style={{ marginTop: '24px' }}><a href="/contact" className="btn-primary" style={{ color: 'var(--black)', textDecoration: 'none' }}>Request consultation</a></div></div></div></section>
-    <footer><div className="wrap"><div className="footer-grid"><div><div className="footer-brand"><img src="/images/ARES_White_Horizontal.png" alt="ARES" /></div><p className="footer-desc">Integrated MEPF engineering solutions for developers and construction companies across Georgia.</p></div><div className="footer-col"><h4>Navigation</h4><a href="/services" onClick={handleNavClick}>Services</a><a href="/about" onClick={handleNavClick}>About Us</a><a href="/projects" onClick={handleNavClick}>Projects</a><a href="/partners" onClick={handleNavClick}>Partners</a><a href="/contact" onClick={handleNavClick}>Contact</a></div><div className="footer-col"><h4>Services</h4><a href="/services" onClick={handleNavClick}>Mechanical</a><a href="/services" onClick={handleNavClick}>Electrical</a><a href="/services" onClick={handleNavClick}>Plumbing</a><a href="/services" onClick={handleNavClick}>Fire protection</a></div><div className="footer-col footer-contact"><h4>Contact</h4><p><a href="mailto:info@ares.ge">info@ares.ge</a></p><p><a href="tel:+995595396139">+995 595 39 61 39</a></p><p>8 S. Virsaladze Street<br />Tbilisi 0108, Georgia</p></div></div><div className="footer-bottom"><p>&copy; 2026 ARES. All rights reserved.</p><p>MEPF Engineering Solutions</p></div></div></footer>
+    <footer><div className="wrap"><div className="footer-grid"><div><div className="footer-brand"><img src="/images/ARES_White_Horizontal.png" alt="ARES" /></div><p className="footer-desc">Integrated MEPF engineering solutions for developers and construction companies across Georgia.</p></div><div className="footer-col"><h4>Navigation</h4><a href="/services">Services</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/partners">Partners</a><a href="/contact">Contact</a></div><div className="footer-col"><h4>Services</h4><a href="/services">Mechanical</a><a href="/services">Electrical</a><a href="/services">Plumbing</a><a href="/services">Fire protection</a></div><div className="footer-col footer-contact"><h4>Contact</h4><p><a href="mailto:info@ares.ge">info@ares.ge</a></p><p><a href="tel:+995595396139">+995 595 39 61 39</a></p><p>8 S. Virsaladze Street<br />Tbilisi 0108, Georgia</p></div></div><div className="footer-bottom"><p>&copy; 2026 ARES. All rights reserved.</p><p>MEPF Engineering Solutions</p></div></div></footer>
   </>);
 }

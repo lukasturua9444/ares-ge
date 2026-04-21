@@ -18,15 +18,21 @@ export default function Home() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) { entry.target.classList.add('v'); observer.unobserve(entry.target); }
+          if (entry.isIntersecting) {
+            entry.target.classList.add('v');
+            observer.unobserve(entry.target);
+          }
         });
       },
       { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     );
     document.querySelectorAll('.anim').forEach((el) => observer.observe(el));
+
     const handleScroll = () => {
       const nav = document.getElementById('nav');
-      if (nav) { nav.style.background = window.scrollY > 60 ? 'rgba(5,5,5,0.95)' : 'rgba(5,5,5,0.85)'; }
+      if (nav) {
+        nav.style.background = window.scrollY > 60 ? 'rgba(5,5,5,0.95)' : 'rgba(5,5,5,0.85)';
+      }
     };
     window.addEventListener('scroll', handleScroll);
 
@@ -46,6 +52,7 @@ export default function Home() {
         });
       });
     }
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -76,7 +83,7 @@ export default function Home() {
           <div className="hero-left">
             <div className="hero-label">MEPF Engineering</div>
             <h1>Engineering the <em>invisible systems</em> that power buildings</h1>
-            <p className="hero-sub">Integrated mechanical, electrical, plumbing &amp; fire protection solutions for developers and construction companies across Georgia.</p>
+            <p className="hero-sub">Integrated mechanical, electrical, plumbing &amp; fire protection solutions for developers and construction companies.</p>
             <div className="hero-btns">
               <a href="/contact" className="btn-primary" style={{ textDecoration: 'none' }}>Request consultation</a>
               <a href="/projects" className="btn-outline">View projects</a>
@@ -92,18 +99,18 @@ export default function Home() {
       <section className="stats"><div className="wrap"><div className="stats-grid anim">
         <div className="stat-item"><span className="stat-num">8+</span><span className="stat-label">Years of experience</span></div>
         <div className="stat-item"><span className="stat-num">20+</span><span className="stat-label">Completed projects</span></div>
-        <div className="stat-item"><span className="stat-num">450K+</span><span className="stat-label">m\u00B2 designed</span></div>
+        <div className="stat-item"><span className="stat-num">450K+</span><span className="stat-label">m² designed</span></div>
       </div></div></section>
 
       <section className="section services" id="services">
         <div className="wrap">
           <div className="section-label anim">What we do</div>
           <h2 className="section-title anim anim-d1">Full-cycle MEPF<br />engineering solutions</h2>
-          <p className="section-sub anim anim-d2">From initial design through final commissioning \u2014 we handle all four building service disciplines under one contract.</p>
+          <p className="section-sub anim anim-d2">From initial design through final commissioning — we handle all four engineering disciplines under one contract.</p>
           <div className="services-grid">
-            <div className="srv-card anim anim-d1"><div className="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2"><path d="M12 2v6m0 0L9 5m3 3l3-3"/><rect x="4" y="10" width="16" height="10" rx="2"/></svg></div><h3>Mechanical</h3><p>HVAC systems, ventilation, heating and cooling. Climate control engineered for efficiency and comfort.</p></div>
-            <div className="srv-card anim anim-d2"><div className="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4m0 14v4M4.22 4.22l2.83 2.83m9.9 9.9l2.83 2.83M1 12h4m14 0h4M4.22 19.78l2.83-2.83m9.9-9.9l2.83-2.83"/></svg></div><h3>Electrical</h3><p>Power distribution, lighting design, low-voltage and automation systems for modern buildings.</p></div>
-            <div className="srv-card anim anim-d3"><div className="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2"><path d="M6 20V10a6 6 0 1112 0v10"/><line x1="4" y1="20" x2="20" y2="20"/></svg></div><h3>Plumbing</h3><p>Water supply, drainage, sewerage and irrigation systems. Designed for reliability and compliance.</p></div>
+            <div className="srv-card anim anim-d1"><div className="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2"><path d="M12 2v6m0 0L9 5m3 3l3-3"/><rect x="4" y="10" width="16" height="10" rx="2"/></svg></div><h3>Mechanical systems</h3><p>HVAC systems, ventilation, heating and cooling. Climate control engineered for efficiency and comfort.</p></div>
+            <div className="srv-card anim anim-d2"><div className="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4m0 14v4M4.22 4.22l2.83 2.83m9.9 9.9l2.83 2.83M1 12h4m14 0h4M4.22 19.78l2.83-2.83m9.9-9.9l2.83-2.83"/></svg></div><h3>Electrical systems</h3><p>Power distribution, lighting systems, low-voltage and automation systems for modern buildings.</p></div>
+            <div className="srv-card anim anim-d3"><div className="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2"><path d="M6 20V10a6 6 0 1112 0v10"/><line x1="4" y1="20" x2="20" y2="20"/></svg></div><h3>Plumbing</h3><p>Water supply, drainage and sewerage systems. Designed for reliability and compliance.</p></div>
             <div className="srv-card anim anim-d4"><div className="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2"><path d="M12 2L8 8h3v6H8l4 6 4-6h-3V8h3L12 2z"/></svg></div><h3>Fire protection</h3><p>Fire alarm systems, automatic sprinklers, evacuation systems, fire ventilation and automation.</p></div>
           </div>
         </div>
@@ -119,7 +126,7 @@ export default function Home() {
           <div className="value-cards">
             <div className="val-card anim anim-d1"><h4>Direct cost savings</h4><p>Single contract eliminates coordination overhead. Unified purchasing reduces material costs.</p></div>
             <div className="val-card anim anim-d2"><h4>Operational efficiency</h4><p>Faster project delivery. Accelerated capital turnover. Reduced management resources.</p></div>
-            <div className="val-card anim anim-d3"><h4>Strategic impact</h4><p>Higher property value through better engineering. Brand protection for developers. Risk reduction.</p></div>
+            <div className="val-card anim anim-d3"><h4>Strategic impact</h4><p>Higher property value through better engineering. Enhancing developers&apos; brand value. Risk reduction.</p></div>
           </div>
         </div></div>
       </section>
@@ -128,12 +135,12 @@ export default function Home() {
         <div className="wrap">
           <div className="section-label anim">Selected projects</div>
           <h2 className="section-title anim anim-d1">From design to<br />commissioning</h2>
-          <p className="section-sub anim anim-d2">Residential complexes, commercial spaces, public buildings \u2014 across Tbilisi, Batumi, Kutaisi and beyond.</p>
+          <p className="section-sub anim anim-d2">Residential complexes, commercial spaces, public buildings — across Tbilisi, Batumi, Kutaisi and beyond.</p>
           <div className="projects-grid">
             {[
-              { name: 'Thalasa Group', location: 'Batumi \u2014 Residential complex', img: '/images/proj-thalasa.jpg', tags: ['Fire ventilation', 'Electrical', 'Plumbing'] },
-              { name: 'M1 Group Kutaisi', location: 'Kutaisi \u2014 Residential & Commercial', img: '/images/proj-m1-group.jpg', tags: ['Fire ventilation', 'Fire alarm', 'Automation'] },
-              { name: 'Archi Iasamnebi', location: 'Tbilisi \u2014 Residential complex', img: '/images/proj-archi.jpg', tags: ['Fire alarm', 'Sprinkler'] },
+              { name: 'Thalasa Group', location: 'Batumi — Residential complex', img: '/images/proj-thalasa.jpg', tags: ['Fire ventilation', 'Electrical', 'Plumbing'] },
+              { name: 'M1 Group Kutaisi', location: 'Kutaisi — Residential & Commercial', img: '/images/proj-m1-group.jpg', tags: ['Fire ventilation', 'Fire alarm', 'Automation'] },
+              { name: 'Archi Iasamnebi', location: 'Tbilisi — Residential complex', img: '/images/proj-archi.jpg', tags: ['Fire alarm', 'Sprinkler'] },
             ].map((proj, i) => (
               <div className={`proj-card anim anim-d${i + 1}`} key={proj.name}>
                 <div className="proj-img">
@@ -182,7 +189,7 @@ export default function Home() {
 
       <footer><div className="wrap">
         <div className="footer-grid">
-          <div><div className="footer-brand"><img src="/images/ARES_White_Horizontal.png" alt="ARES" /></div><p className="footer-desc">Integrated MEPF engineering solutions for developers and construction companies across Georgia. From design to commissioning.</p></div>
+          <div+<div className="footer-brand"><img src="/images/ARES_White_Horizontal.png" alt="ARES" /></div><p className="footer-desc">Integrated MEPF engineering solutions for developers and construction companies across Georgia. From design to commissioning.</p></div>
           <div className="footer-col"><h4>Navigation</h4><a href="/services">Services</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/partners">Partners</a><a href="/contact">Contact</a></div>
           <div className="footer-col"><h4>Services</h4><a href="/services">Mechanical</a><a href="/services">Electrical</a><a href="/services">Plumbing</a><a href="/services">Fire protection</a></div>
           <div className="footer-col footer-contact"><h4>Contact</h4><p><a href="mailto:info@ares.ge">info@ares.ge</a></p><p><a href="tel:+995595396139">+995 595 39 61 39</a></p><p>8 S. Virsaladze Street<br />Tbilisi 0108, Georgia</p></div>

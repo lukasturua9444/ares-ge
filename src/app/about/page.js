@@ -63,13 +63,12 @@ export default function AboutPage() {
           </div>
           <div className="nav-right">
             <div className="lang-sw">
-              <a href="/ka/">GE</a>
-              <a href="/" className="active">EN</a>
-              <a href="/ru/">RU</a>
+              <a href="/ka/about">GE</a>
+              <a href="/about" className="active">EN</a>
             </div>
             <a href="/contact" className="nav-cta">Get in touch</a>
           </div>
-                  <button type="button" className={`hamburger${menuOpen ? ' active' : ''}`} id="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu"><span></span><span></span><span></span></button>
+          <button type="button" className={`hamburger${menuOpen ? ' active' : ''}`} id="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu"><span></span><span></span><span></span></button>
         </div>
       </nav>
 
@@ -89,7 +88,7 @@ export default function AboutPage() {
             <div className="about-left anim">
               <div className="section-label">Who we are</div>
               <h2 className="section-title">Founded in 2024.<br />Experience since 2017.</h2>
-              <p className="section-sub" style={{ maxWidth: '100%' }}>ARES was founded in 2024, but our team has been delivering MEPF engineering solutions since 2017. Our goal is to ensure that engineering systems are properly integrated into the project — technically sound, economically efficient, and coordinated with the construction schedule.</p>
+              <p className="section-sub" style={{ maxWidth: '100%' }}>ARES was founded in 2024, and our team has been delivering MEPF engineering solutions since 2017. Our goal is to ensure that engineering systems are properly integrated into the project — technically sound, economically efficient, and coordinated with the construction schedule.</p>
             </div>
             <div className="about-right anim anim-d2">
               <div className="stats-grid" style={{ maxWidth: '100%' }}>
@@ -132,7 +131,7 @@ export default function AboutPage() {
             <div className="srv-card anim anim-d1"><h3>Residential Complexes</h3><p>Multi-apartment residential buildings with full MEPF systems and smart home integration.</p></div>
             <div className="srv-card anim anim-d2"><h3>Commercial Properties</h3><p>Office buildings, shopping centers, hotel complexes, and business parks requiring HVAC, electrical distribution, and fire protection.</p></div>
             <div className="srv-card anim anim-d3"><h3>Mixed-Use Buildings</h3><p>Projects combining residential, commercial, and retail functions under one integrated engineering solution.</p></div>
-            <div className="srv-card anim anim-d4"><h3>Public and Technical</h3><p>Schools, educational institutions, industrial buildings, warehouses, and specialized technical facilities.</p></div>
+            <div className="srv-card anim anim-d4"><h3>Public and Technical Facilities</h3><p>Schools, educational institutions, industrial buildings, warehouses, and specialized technical facilities.</p></div>
           </div>
         </div>
       </section>
@@ -168,7 +167,7 @@ export default function AboutPage() {
               <h4>Contact</h4>
               <p><a href="mailto:info@ares.ge">info@ares.ge</a></p>
               <p><a href="tel:+995595396139">+995 595 39 61 39</a></p>
-              <p>8 S. Virsaladze Street<br />Tbilisi 0108, Georgia</p>
+              <p>8 S. Virsaladze Street<br />Tbilisi 0108, Georgia </p>
             </div>
           </div>
           <div className="footer-bottom">

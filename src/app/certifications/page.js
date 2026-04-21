@@ -17,7 +17,14 @@ export default function CertificationsPage() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('v'); observer.unobserve(entry.target); } }); },
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('v');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
       { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     );
     document.querySelectorAll('.anim').forEach((el) => observer.observe(el));
@@ -46,7 +53,7 @@ export default function CertificationsPage() {
         <div className="wrap">
           <div className="section-label anim">Certifications</div>
           <h1 className="page-title anim anim-d1">Built on international<br /><em>standards</em></h1>
-          <p className="section-sub anim anim-d2">Our engineering solutions are based on international standards and professional guidelines.</p>
+          <p className="section-sub anim anim-d2">Our engineering solutions follow international standards and professional guidelines.</p>
         </div>
       </section>
 
@@ -82,7 +89,7 @@ export default function CertificationsPage() {
             <div className="srv-card anim anim-d1"><h3>Design phase</h3><p>All engineering designs follow international codes and local regulatory requirements from day one.</p></div>
             <div className="srv-card anim anim-d2"><h3>Installation</h3><p>Installation procedures follow manufacturer specifications and applicable standards for each discipline.</p></div>
             <div className="srv-card anim anim-d3"><h3>Testing</h3><p>System performance verification and functional testing per international commissioning protocols.</p></div>
-            <div className="srv-card anim anim-d4"><h3>Documentation</h3><p>Complete as-built documentation, test reports, and compliance certificates for project handover.</p></div>
+            <div className="srv-card anim anim-d4"><h3>Commissioning</h3><p>System startup, performance balancing, and final handover — every system validated and delivered ready for operation.</p></div>
           </div>
         </div>
       </section>

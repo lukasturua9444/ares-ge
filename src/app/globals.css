@@ -391,3 +391,24 @@ footer {
 @media (max-width: 600px) {
   .nav-right { display: none; }
 }
+
+
+/* Mobile menu open state - disable page content stacking */
+body.menu-open {
+  overflow: hidden;
+}
+body.menu-open .hero,
+body.menu-open .hero-inner,
+body.menu-open .hero-bg,
+body.menu-open .stats,
+body.menu-open .section,
+body.menu-open .services,
+body.menu-open .value,
+body.menu-open .projects,
+body.menu-open .cta-section,
+body.menu-open .page-header,
+body.menu-open footer,
+body.menu-open .wrap {
+  position: static !important;
+  z-index: auto !important;
+}

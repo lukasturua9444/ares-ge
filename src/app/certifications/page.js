@@ -6,6 +6,15 @@ export default function CertificationsPage() {
   const handleNavClick = () => setMenuOpen(false);
 
   useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+    return () => document.body.classList.remove('menu-open');
+  }, [menuOpen]);
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('v'); observer.unobserve(entry.target); } }); },
       { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }

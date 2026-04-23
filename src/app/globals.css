@@ -492,3 +492,32 @@ body.menu-open .wrap {
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* ========== MOBILE LANGUAGE SWITCHER (Phase 4 fix) ========== */
+@media (max-width: 600px) {
+  body.menu-open .nav-right {
+    display: flex !important;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    padding: 20px 24px;
+    background: #0a0a0a;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+  }
+  body.menu-open .nav-right .nav-cta { display: none; }
+  body.menu-open .lang-sw { gap: 6px; }
+  body.menu-open .lang-sw a {
+    font-size: 15px;
+    padding: 8px 18px;
+    border-radius: 6px;
+  }
+  body.menu-open .nav-links.open {
+    padding-top: 80px;
+  }
+}

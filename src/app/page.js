@@ -82,7 +82,7 @@ export default function Home() {
         <div className="hero-inner">
           <div className="hero-left">
             <div className="hero-label">MEPF Engineering</div>
-            <h1><em>Invisible</em> systems.<br /><em>Visible value</em>.</h1>
+            <h1><em>Invisible</em> systems.<br />Visible <em>value</em>.</h1>
             <p className="hero-sub">Integrated mechanical, electrical, plumbing &amp; fire protection solutions for developers and construction companies.</p>
             <div className="hero-btns">
               <a href="/contact" className="btn-primary" style={{ textDecoration: 'none' }}>Request consultation</a>

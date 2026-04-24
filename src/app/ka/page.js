@@ -85,7 +85,7 @@ export default function HomeKa() {
         <div className="hero-inner">
           <div className="hero-left">
             <div className="hero-label">MEPF ინჟინერია</div>
-            <h1><em>უხილავი სისტემები</em>, რომლებიც შენობებს ამუშავებს</h1>
+            <h1><em>უხილავი</em> სისტემები.<br />ხილული <em>ღირებულება</em>.</h1>
             <p className="hero-sub">ინტეგრირებული მექანიკური, ელექტრული, სანტექნიკური და ხანძარსაწინააღმდეგო გადაწყვეტილებები დეველოპერებისა და სამშენებლო კომპანიებისთვის.</p>
             <div className="hero-btns">
               <a href="/ka/contact" className="btn-primary" style={{ textDecoration: 'none' }}>მოითხოვეთ კონსულტაცია</a>

@@ -81,20 +81,15 @@ export default function HomeKa() {
       </nav>
 
       <section className="hero">
-        <div className="hero-bg"><div className="hero-grid-pattern"></div></div>
-        <div className="hero-inner">
-          <div className="hero-left">
-            <div className="hero-label">MEPF ინჟინერია</div>
-            <h1><em>უხილავი</em> სისტემები.<br />ხილული <em>ღირებულება</em>.</h1>
-            <p className="hero-sub">ინტეგრირებული მექანიკური, ელექტრული, სანტექნიკური და ხანძარსაწინააღმდეგო გადაწყვეტილებები დეველოპერებისა და სამშენებლო კომპანიებისთვის.</p>
-            <div className="hero-btns">
-              <a href="/ka/contact" className="btn-primary" style={{ textDecoration: 'none' }}>მოითხოვეთ კონსულტაცია</a>
-              <a href="/ka/projects" className="btn-outline">პროექტების ნახვა</a>
-            </div>
-          </div>
-          <div className="hero-right">
-            <div className="hero-visual"><img src="/images/ARES_White_Vertical.png" alt="ARES Logo" /></div>
-            <div className="hero-badge"><div className="num">450K+</div><div className="lab">დაპროექტებული მ²</div></div>
+        <div className="hero-photo"></div>
+        <div className="hero-overlay"></div>
+        <div className="hero-content">
+          <div className="hero-label">MEPF ინჟინერია</div>
+          <h1><em>უხილავი</em> სისტემები.<br />ხილული <em>ღირებულება</em>.</h1>
+          <p className="hero-sub">ინტეგრირებული მექანიკური, ელექტრული, სანტექნიკური და ხანძარსაწინააღმდეგო გადაწყვეტილებები დეველოპერებისა და სამშენებლო კომპანიებისთვის.</p>
+          <div className="hero-btns">
+            <a href="/ka/contact" className="btn-primary" style={{ textDecoration: 'none' }}>მოითხოვეთ კონსულტაცია</a>
+            <a href="/ka/projects" className="btn-outline">პროექტების ნახვა</a>
           </div>
         </div>
       </section>

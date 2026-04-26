@@ -13,7 +13,7 @@
   --accent: #E8441E;
   --accent2: #F04923;
   --teal: #9DD8D0;
-  --font: 'Outfit', sans-serif;
+  --font: 'Outfit', 'Noto Sans Georgian', sans-serif;
   --geo: 'Noto Sans Georgian', 'Outfit', sans-serif;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --max: 1200px;

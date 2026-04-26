@@ -122,9 +122,9 @@ export default function HomeKa() {
             <p className="section-sub anim anim-d2">ერთი კონტრაქტორი ხუთი-შვიდის ნაცვლად. ერთიანი შესყიდვები. ნულოვანი სისტემური კონფლიქტები. პროგნოზირებადი ვადები. შემცირებული ჯამური ღირებულება.</p>
           </div>
           <div className="value-cards">
-            <div className="val-card anim anim-d1"><h4>პირდაპირი ხარჯების დაზოგვა</h4><p>ერთიანი კონტრაქტი აღმოფხვრის პროექტის მართვის ზედნადებ ხარჯებს. ერთიანი შესყიდვები ამცირებს მასალის ღირებულებას.</p></div>
-            <div className="val-card anim anim-d2"><h4>ოპერაციული ეფექტურობა</h4><p>პროექტის სწრაფი ჩაბარება. დაჩქარებული კაპიტალის ბრუნვა. მართვის რესურსების შემცირება.</p></div>
-            <div className="val-card anim anim-d3"><h4>სტრატეგიული გავლენა</h4><p>უკეთესი ინჟინერიით გაზრდილი უძრავი ქონების ღირებულება. დეველოპერების ბრენდის გაძლიერება. რისკის შემცირება.</p></div>
+            <div className="val-card anim anim-d1"><div className="val-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" /></svg></div><div className="val-body"><h4>პირდაპირი ხარჯების დაზოგვა</h4><p>ერთიანი კონტრაქტი აღმოფხვრის პროექტის მართვის ზედნადებ ხარჯებს. ერთიანი შესყიდვები ამცირებს მასალის ღირებულებას.</p></div></div>
+            <div className="val-card anim anim-d2"><div className="val-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="4" width="14" height="17" rx="2" /><path d="M9 4V2h6v2" /><path d="M8 11l2 2 4-4" /></svg></div><div className="val-body"><h4>ოპერაციული ეფექტურობა</h4><p>პროექტის სწრაფი ჩაბარება. დაჩქარებული კაპიტალის ბრუნვა. მართვის რესურსების შემცირება.</p></div></div>
+            <div className="val-card anim anim-d3"><div className="val-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z" /><path d="M9 12l2 2 4-4" /></svg></div><div className="val-body"><h4>სტრატეგიული გავლენა</h4><p>უკეთესი ინჟინერიით გაზრდილი უძრავი ქონების ღირებულება. დეველოპერების ბრენდის გაძლიერება. რისკის შემცირება.</p></div></div>
           </div>
         </div></div>
       </section>

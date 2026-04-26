@@ -65,10 +65,33 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <section className="discipline-cards anim">
+        <div className="wrap">
+          <div className="discipline-grid">
+            <a href="#hvac-systems" className="disc-card">
+              <div className="disc-photo" style={{ backgroundImage: "url('/images/services/mechanical.jpg')" }}></div>
+              <div className="disc-overlay"><span>M · Mechanical</span><span className="disc-arrow">→</span></div>
+            </a>
+            <a href="#electrical-systems" className="disc-card">
+              <div className="disc-photo" style={{ backgroundImage: "url('/images/services/electrical.jpg')" }}></div>
+              <div className="disc-overlay"><span>E · Electrical</span><span className="disc-arrow">→</span></div>
+            </a>
+            <a href="#plumbing-drainage" className="disc-card">
+              <div className="disc-photo" style={{ backgroundImage: "url('/images/services/plumbing.jpg')" }}></div>
+              <div className="disc-overlay"><span>P · Plumbing</span><span className="disc-arrow">→</span></div>
+            </a>
+            <a href="#fire-safety" className="disc-card">
+              <div className="disc-photo" style={{ backgroundImage: "url('/images/services/fire-protection.jpg')" }}></div>
+              <div className="disc-overlay"><span>F · Fire Protection</span><span className="disc-arrow">→</span></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="section">
         <div className="wrap">
           {services.map((service, i) => (
-            <div key={service.title} className={`service-detail anim anim-d${Math.min(i + 1, 4)}`} style={{ marginBottom: '40px' }}>
+            <div key={service.title} id={service.title.toLowerCase().replace(/[\s&]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')} className={`service-detail anim anim-d${Math.min(i + 1, 4)}`} style={{ marginBottom: '40px' }}>
               <div className="val-card" style={{ borderLeft: '3px solid var(--accent)', padding: '32px' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px', alignItems: 'start' }}>
                   <div>

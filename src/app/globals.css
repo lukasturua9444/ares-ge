@@ -570,3 +570,79 @@ body.menu-open .wrap {
     max-width: 100%;
   }
 }
+
+
+/* Topic 3 — Service discipline cards */
+.discipline-cards {
+  padding: 60px 0 0;
+}
+.discipline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.disc-card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #111;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.disc-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(1) contrast(1.05);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+.disc-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 18px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.95) 100%);
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transform: translateY(101%);
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.disc-arrow {
+  color: var(--accent);
+  transition: transform 0.4s ease;
+  font-size: 16px;
+}
+.disc-card:hover {
+  transform: translateY(-4px);
+}
+.disc-card:hover .disc-photo {
+  filter: grayscale(0.2) contrast(1.05);
+  transform: scale(1.03);
+}
+.disc-card:hover .disc-overlay {
+  transform: translateY(0);
+}
+.disc-card:hover .disc-arrow {
+  transform: translateX(4px);
+}
+@media (max-width: 900px) {
+  .discipline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .discipline-grid {
+    grid-template-columns: 1fr;
+  }
+}

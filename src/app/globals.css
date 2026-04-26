@@ -167,7 +167,7 @@ img { max-width: 100%; display: block; }
 .hero-badge .num { font-size: 28px; font-weight: 700; color: var(--black); }
 .hero-badge .lab { font-size: 11px; color: rgba(0,0,0,0.6); }
 
-.stats { padding: 0 0 80px; position: relative;  margin-top: -40px; }
+.stats { padding: 0 0 80px; position: relative; z-index: 2; margin-top: -40px; }
 .stats-grid {
   max-width: 800px; margin: 0 auto;
   display: grid; grid-template-columns: repeat(3, 1fr);

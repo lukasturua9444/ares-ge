@@ -25,8 +25,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.lang = location.pathname.startsWith('/ka') ? 'ka' : 'en';`
+          }}
+        />
         {children}
         <script
           dangerouslySetInnerHTML={{

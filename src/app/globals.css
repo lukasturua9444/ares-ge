@@ -647,3 +647,9 @@ body.menu-open .wrap {
     grid-template-columns: 1fr;
   }
 }
+
+/* Topic 6: Why ARES benefit-card icon squares */
+.val-card { display: flex; gap: 14px; align-items: flex-start; }
+.val-icon { flex: 0 0 42px; width: 42px; height: 42px; background: rgba(240,83,47,0.08); border: 1px solid rgba(240,83,47,0.25); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+.val-icon img { width: 22px; height: 22px; opacity: 0.95; display: block; }
+.val-body { flex: 1; min-width: 0; }

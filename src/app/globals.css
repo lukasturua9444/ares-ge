@@ -361,7 +361,7 @@ footer {
 
 .about-hero {
   position: relative;
-  min-height: 480px;
+  min-height: 560px;
   overflow: hidden;
   background-color: #080808;
   padding: 140px 0 80px;
@@ -371,7 +371,7 @@ footer {
   inset: 0;
   background-image: url('/images/about-hero-rappelling.jpg');
   background-size: cover;
-  background-position: center right;
+  background-position: right 25%;
   z-index: 0;
 }
 .about-hero-overlay {

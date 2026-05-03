@@ -72,9 +72,11 @@ export default function AboutPageKa() {
         </div>
       </nav>
 
-      {/* PAGE HEADER */}
-      <section className="page-header">
-        <div className="wrap">
+      {/* ABOUT HERO */}
+      <section className="about-hero">
+        <div className="about-hero-photo" />
+        <div className="about-hero-overlay" />
+        <div className="wrap about-hero-inner">
           <div className="section-label anim">ჩვენ შესახებ</div>
           <h1 className="page-title anim anim-d1">საინჟინრო სიზუსტე.<br /><em>სისტემატური აღსრულება.</em></h1>
           <p className="section-sub anim anim-d2">ARES არის საინჟინრო კომპანია, რომელიც სპეციალიზირებულია სამშენებლო პროექტებისთვის MEPF სისტემების პროექტირებასა და მონტაჟში.</p>

@@ -15,7 +15,7 @@ export const metadata = {
   openGraph: {
     title: 'ARES — MEPF Engineering Solutions',
     description: 'Integrated MEPF engineering for developers and construction companies across Georgia.',
-    url: 'https://ares-ge.vercel.app',
+    url: 'https://www.ares.ge',
     siteName: 'ARES',
     locale: 'en_US',
     type: 'website',

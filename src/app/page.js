@@ -73,8 +73,6 @@ export default function Home() {
             <a href="/services" onClick={handleNavClick}>Services</a>
             <a href="/about" onClick={handleNavClick}>About Us</a>
             <a href="/projects" onClick={handleNavClick}>Projects</a>
-            <a href="/partners" onClick={handleNavClick}>Partners</a>
-            <a href="/certifications" onClick={handleNavClick}>Certifications</a>
             <a href="/contact" onClick={handleNavClick}>Contact</a>
           </div>
           <div className="nav-right">
@@ -193,7 +191,7 @@ export default function Home() {
       <footer><div className="wrap">
         <div className="footer-grid">
           <div><div className="footer-brand"><img src="/images/ARES_White_Horizontal.png" alt="ARES" /></div><p className="footer-desc">Integrated MEPF engineering solutions for developers and construction companies across Georgia. From design to commissioning.</p></div>
-          <div className="footer-col"><h4>Navigation</h4><a href="/services">Services</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/partners">Partners</a><a href="/contact">Contact</a></div>
+          <div className="footer-col"><h4>Navigation</h4><a href="/services">Services</a><a href="/about">About Us</a><a href="/projects">Projects</a><a href="/contact">Contact</a></div>
           <div className="footer-col"><h4>Services</h4><a href="/services">Mechanical</a><a href="/services">Electrical</a><a href="/services">Plumbing</a><a href="/services">Fire protection</a></div>
           <div className="footer-col footer-contact"><h4>Contact</h4><p><a href="mailto:info@ares.ge">info@ares.ge</a></p><p><a href="tel:+995595396139">+995 595 39 61 39</a></p><p>8 S. Virsaladze Street<br />Tbilisi 0108, Georgia</p></div>
         </div>

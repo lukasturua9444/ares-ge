@@ -76,8 +76,6 @@ export default function HomeKa() {
             <a href="/ka/services" onClick={handleNavClick}>სერვისები</a>
             <a href="/ka/about" onClick={handleNavClick}>ჩვენ შესახებ</a>
             <a href="/ka/projects" onClick={handleNavClick}>პროექტები</a>
-            <a href="/ka/partners" onClick={handleNavClick}>პარტნიორები</a>
-            <a href="/ka/certifications" onClick={handleNavClick}>სერტიფიკატები</a>
             <a href="/ka/contact" onClick={handleNavClick}>კონტაქტი</a>
           </div>
           <div className="nav-right">
@@ -196,7 +194,7 @@ export default function HomeKa() {
       <footer><div className="wrap">
         <div className="footer-grid">
           <div><div className="footer-brand"><img src="/images/ARES_White_Horizontal.png" alt="ARES" /></div><p className="footer-desc">ინტეგრირებული MEPF საინჟინრო გადაწყვეტილებები დეველოპერებისა და სამშენებლო კომპანიებისთვის. პროექტირებიდან ექსპლუატაციაში გაშვებამდე.</p></div>
-          <div className="footer-col"><h4>ნავიგაცია</h4><a href="/ka/services">სერვისები</a><a href="/ka/about">ჩვენ შესახებ</a><a href="/ka/projects">პროექტები</a><a href="/ka/partners">პარტნიორები</a><a href="/ka/contact">კონტაქტი</a></div>
+          <div className="footer-col"><h4>ნავიგაცია</h4><a href="/ka/services">სერვისები</a><a href="/ka/about">ჩვენ შესახებ</a><a href="/ka/projects">პროექტები</a><a href="/ka/contact">კონტაქტი</a></div>
           <div className="footer-col"><h4>სერვისები</h4><a href="/ka/services">მექანიკური</a><a href="/ka/services">ელექტრული</a><a href="/ka/services">სანტექნიკა</a><a href="/ka/services">ხანძარსაწინააღმდეგო</a></div>
           <div className="footer-col footer-contact"><h4>კონტაქტი</h4><p><a href="mailto:info@ares.ge">info@ares.ge</a></p><p><a href="tel:+995595396139">+995 595 39 61 39</a></p><p>ს. ვირსალაძის ქ. 8<br />თბილისი 0108, საქართველო</p></div>
         </div>

@@ -138,6 +138,21 @@ export default function AboutPageKa() {
         </div>
       </section>
 
+      {/* COMPLIANCE AT EVERY STAGE */}
+      <section className="section services">
+        <div className="wrap" style={{ textAlign: 'center' }}>
+          <div className="section-label anim center">ჩვენი ვალდებულება</div>
+          <h2 className="section-title anim anim-d1" style={{ margin: '0 auto 8px' }}>შესაბამისობა ყველა ეტაპზე</h2>
+          <p className="section-sub anim anim-d2" style={{ margin: '0 auto 48px' }}>პროექტირებიდან ექსპლუატაციაში გაშვებამდე, ყოველი სისტემა აკმაყოფილებს ან აღემატება საერთაშორისო მოთხოვნებს.</p>
+          <div className="services-grid">
+            <div className="srv-card anim anim-d1"><h3>პროექტირების ეტაპი</h3><p>ყველა საინჟინრო პროექტი მიჰყვება საერთაშორისო კოდექსებსა და ადგილობრივ მარეგულირებელ მოთხოვნებს პირველივე დღიდან.</p></div>
+            <div className="srv-card anim anim-d2"><h3>მონტაჟი</h3><p>მონტაჟის პროცედურები მიჰყვება მწარმოებლის სპეციფიკაციებს და ყოველი მიმართულებისთვის მოქმედ სტანდარტებს.</p></div>
+            <div className="srv-card anim anim-d3"><h3>ტესტირება</h3><p>სისტემის მუშაობის შემოწმება და ფუნქციური ტესტირება საერთაშორისო ექსპლუატაციაში გაშვების პროტოკოლების შესაბამისად.</p></div>
+            <div className="srv-card anim anim-d4"><h3>ექსპლუატაციაში გაშვება</h3><p>სისტემის გაშვება, მუშაობის დაბალანსება და საბოლოო ჩაბარება — ყოველი სისტემა ვალიდირებული და ოპერირებისთვის მზად მიწოდებული.</p></div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="cta-section">
         <div className="wrap">

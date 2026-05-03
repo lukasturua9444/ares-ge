@@ -57,8 +57,6 @@ export default function AboutPageKa() {
             <a href="/ka/services" onClick={handleNavClick}>სერვისები</a>
             <a href="/ka/about" className="active-link" onClick={handleNavClick}>ჩვენ შესახებ</a>
             <a href="/ka/projects" onClick={handleNavClick}>პროექტები</a>
-            <a href="/ka/partners" onClick={handleNavClick}>პარტნიორები</a>
-            <a href="/ka/certifications" onClick={handleNavClick}>სერტიფიკატები</a>
             <a href="/ka/contact" onClick={handleNavClick}>კონტაქტი</a>
           </div>
           <div className="nav-right">
@@ -174,7 +172,7 @@ export default function AboutPageKa() {
             </div>
             <div className="footer-col">
               <h4>ნავიგაცია</h4>
-              <a href="/ka/services">სერვისები</a><a href="/ka/about">ჩვენ შესახებ</a><a href="/ka/projects">პროექტები</a><a href="/ka/partners">პარტნიორები</a><a href="/ka/contact">კონტაქტი</a>
+              <a href="/ka/services">სერვისები</a><a href="/ka/about">ჩვენ შესახებ</a><a href="/ka/projects">პროექტები</a><a href="/ka/contact">კონტაქტი</a>
             </div>
             <div className="footer-col">
               <h4>სერვისები</h4>

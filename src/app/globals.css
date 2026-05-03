@@ -383,6 +383,10 @@ footer {
 .about-hero-inner {
   position: relative;
   z-index: 2;
+}
+.about-hero-inner > .section-label,
+.about-hero-inner > .page-title,
+.about-hero-inner > .section-sub {
   max-width: 680px;
 }
 @media (max-width: 720px) {

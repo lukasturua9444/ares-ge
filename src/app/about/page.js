@@ -72,9 +72,11 @@ export default function AboutPage() {
         </div>
       </nav>
 
-      {/* PAGE HEADER */}
-      <section className="page-header">
-        <div className="wrap">
+      {/* ABOUT HERO */}
+      <section className="about-hero">
+        <div className="about-hero-photo" />
+        <div className="about-hero-overlay" />
+        <div className="wrap about-hero-inner">
           <div className="section-label anim">About Us</div>
           <h1 className="page-title anim anim-d1">Engineering precision.<br /><em>Delivered systematically.</em></h1>
           <p className="section-sub anim anim-d2">ARES is an engineering company specializing in the design and installation of MEPF systems for construction projects.</p>

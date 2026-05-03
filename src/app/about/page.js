@@ -138,6 +138,21 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* COMPLIANCE AT EVERY STAGE */}
+      <section className="section services">
+        <div className="wrap" style={{ textAlign: 'center' }}>
+          <div className="section-label anim center">Our commitment</div>
+          <h2 className="section-title anim anim-d1" style={{ margin: '0 auto 8px' }}>Compliance at every stage</h2>
+          <p className="section-sub anim anim-d2" style={{ margin: '0 auto 48px' }}>From design through commissioning, every system meets or exceeds international requirements.</p>
+          <div className="services-grid">
+            <div className="srv-card anim anim-d1"><h3>Design phase</h3><p>All engineering designs follow international codes and local regulatory requirements from day one.</p></div>
+            <div className="srv-card anim anim-d2"><h3>Installation</h3><p>Installation procedures follow manufacturer specifications and applicable standards for each discipline.</p></div>
+            <div className="srv-card anim anim-d3"><h3>Testing</h3><p>System performance verification and functional testing per international commissioning protocols.</p></div>
+            <div className="srv-card anim anim-d4"><h3>Commissioning</h3><p>System startup, performance balancing, and final handover — every system validated and delivered ready for operation.</p></div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="cta-section">
         <div className="wrap">

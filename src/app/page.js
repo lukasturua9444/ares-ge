@@ -142,7 +142,7 @@ export default function Home() {
             {[
               { name: 'Thalasa Group', location: 'Batumi — Residential complex', img: '/images/proj-thalasa.jpg', tags: ['Fire ventilation', 'Electrical', 'Plumbing'] },
               { name: 'M1 Group Kutaisi', location: 'Kutaisi — Residential & Commercial', img: '/images/proj-m1-group.jpg', tags: ['Fire ventilation', 'Fire alarm', 'Automation'] },
-              { name: 'Archi Iasamnebi', location: 'Tbilisi — Residential complex', img: '/images/proj-archi.jpg', tags: ['Fire alarm', 'Sprinkler'] },
+              { name: 'Archi Iasamnebi', location: 'Tbilisi — Residential complex', img: '/images/proj-archi.jpg', tags: ['Sprinkler'] },
             ].map((proj, i) => (
               <div className={`proj-card anim anim-d${i + 1}`} key={proj.name}>
                 <div className="proj-img">

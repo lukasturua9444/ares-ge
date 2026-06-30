@@ -145,7 +145,7 @@ export default function HomeKa() {
             {[
               { name: 'Thalasa Group', location: 'ბათუმი — საცხოვრებელი კომპლექსი', img: '/images/proj-thalasa.jpg', tags: ['ხანძარსაწინააღმდეგო ვენტილაცია', 'ელექტრული', 'სანტექნიკა'] },
               { name: 'M1 Group Kutaisi', location: 'ქუთაისი — საცხოვრებელი და კომერციული', img: '/images/proj-m1-group.jpg', tags: ['ხანძარსაწინააღმდეგო ვენტილაცია', 'ხანძარსაწინააღმდეგო სიგნალიზაცია', 'ავტომატიზაცია'] },
-              { name: 'Archi Iasamnebi', location: 'თბილისი — საცხოვრებელი კომპლექსი', img: '/images/proj-archi.jpg', tags: ['ხანძარსაწინააღმდეგო სიგნალიზაცია', 'სპრინკლერი'] },
+              { name: 'Archi Iasamnebi', location: 'თბილისი — საცხოვრებელი კომპლექსი', img: '/images/proj-archi.jpg', tags: ['სპრინკლერი'] },
             ].map((proj, i) => (
               <div className={`proj-card anim anim-d${i + 1}`} key={proj.name}>
                 <div className="proj-img">

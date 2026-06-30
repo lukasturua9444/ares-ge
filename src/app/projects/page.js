@@ -31,7 +31,7 @@ export default function ProjectsPage() {
     { name: 'M1 Group Kutaisi', location: 'Kutaisi', type: 'Residential & Commercial complex', img: '/images/proj-m1-group.jpg', tags: ['Fire ventilation', 'Fire alarm', 'Evacuation', 'Sprinkler', 'Automation', 'Sound system'] },
     { name: 'Shopping Mall in Kutaisi', location: 'Kutaisi', type: 'Commercial facility', img: '/images/proj-shopping-mall.jpg', tags: ['Fire ventilation', 'Fire alarm', 'Evacuation', 'Sprinkler', 'Automation', 'Sound system'] },
     { name: 'Casio Development', location: 'Tbilisi', type: 'Residential complex', img: '/images/proj-casio.jpg', tags: ['Fire ventilation', 'Fire alarm', 'Evacuation', 'Sprinkler', 'Automation', 'Sound system'] },
-    { name: 'Archi Iasamnebi', location: 'Tbilisi', type: 'Residential complex', img: '/images/proj-archi.jpg', tags: ['Fire alarm', 'Sprinkler'] },
+    { name: 'Archi Iasamnebi', location: 'Tbilisi', type: 'Residential complex', img: '/images/proj-archi.jpg', tags: ['Sprinkler'] },
     { name: 'Compact Mukhiani', location: 'Tbilisi', type: 'Residential complex', img: '/images/proj-compact.jpg', tags: ['Fire ventilation', 'Fire alarm', 'Evacuation', 'Sprinkler', 'Automation', 'Electrical'] },
     { name: 'Baustar Rustavi', location: 'Rustavi', type: 'Residential complex', img: '/images/proj-baustar.jpg', tags: ['Fire ventilation', 'Fire alarm', 'Evacuation', 'Sprinkler', 'Automation', 'Electrical'] },
     { name: 'Kvareli School', location: 'Kvareli', type: 'Public building', img: null, tags: ['Fire ventilation', 'Fire alarm', 'Evacuation', 'Sprinkler', 'Automation', 'Electrical'] },

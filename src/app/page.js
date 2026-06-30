@@ -86,6 +86,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-photo"></div>
         <div className="hero-overlay"></div>
+        <img src="/images/ARES_White_Vertical.png" alt="ARES" className="hero-logo" />
         <div className="hero-content">
           <div className="hero-label">MEPF Engineering</div>
           <h1><em>Invisible</em> systems.<br />Visible <em>value</em>.</h1>

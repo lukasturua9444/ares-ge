@@ -45,15 +45,6 @@ export default function RootLayout({ children }) {
             `
           }}
         />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=2187931008604912&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
         <script
           dangerouslySetInnerHTML={{
             __html: `document.documentElement.lang = location.pathname.startsWith('/ka') ? 'ka' : 'en';`

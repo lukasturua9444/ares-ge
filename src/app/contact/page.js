@@ -1,5 +1,17 @@
 'use client';
 import { useEffect, useState } from 'react';
+import ContactForm from '../components/ContactForm';
+
+const t = {
+  name: 'Your name', company: 'Company', email: 'Email', phone: 'Phone',
+  selectType: 'Select project type',
+  types: { residential: 'Residential complex', commercial: 'Commercial property', mixed: 'Mixed-use building', public: 'Public building', other: 'Other' },
+  message: 'Tell us about your project',
+  send: 'Send message', sending: 'Sending…',
+  success: 'Thank you — your message has been sent. We will get back to you shortly.',
+  error: 'Something went wrong and the message was not sent. Please try again or email us at info@ares.ge.',
+  required: 'Please fill in your name, a valid email address and a short description of your project.',
+};
 
 export default function ContactPage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,24 +59,7 @@ export default function ContactPage() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'start' }}>
             <div className="anim">
               <h2 className="section-title" style={{ fontSize: '28px', marginBottom: '24px' }}>Send us a message</h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-                  <input type="text" placeholder="Your name" style={{ padding: '14px 18px', background: 'var(--card)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '14px', color: 'var(--text)', fontFamily: 'var(--font)', outline: 'none', width: '100%' }} />
-                  <input type="text" placeholder="Company" style={{ padding: '14px 18px', background: 'var(--card)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '14px', color: 'var(--text)', fontFamily: 'var(--font)', outline: 'none', width: '100%' }} />
-                </div>
-                <input type="email" placeholder="Email" style={{ padding: '14px 18px', background: 'var(--card)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '14px', color: 'var(--text)', fontFamily: 'var(--font)', outline: 'none', width: '100%' }} />
-                <input type="tel" placeholder="Phone" style={{ padding: '14px 18px', background: 'var(--card)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '14px', color: 'var(--text)', fontFamily: 'var(--font)', outline: 'none', width: '100%' }} />
-                <select style={{ padding: '14px 18px', background: 'var(--card)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '14px', color: 'var(--text2)', fontFamily: 'var(--font)', outline: 'none', width: '100%' }}>
-                  <option value="">Select project type</option>
-                  <option value="residential">Residential complex</option>
-                  <option value="commercial">Commercial property</option>
-                  <option value="mixed">Mixed-use building</option>
-                  <option value="public">Public building</option>
-                  <option value="other">Other</option>
-                </select>
-                <textarea placeholder="Tell us about your project" rows={5} style={{ padding: '14px 18px', background: 'var(--card)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '14px', color: 'var(--text)', fontFamily: 'var(--font)', outline: 'none', width: '100%', resize: 'vertical' }}></textarea>
-                <button className="btn-primary" style={{ width: 'fit-content' }}>Send message</button>
-              </div>
+              <ContactForm t={t} lang="en" />
             </div>
             <div className="anim anim-d2">
               <h2 className="section-title" style={{ fontSize: '28px', marginBottom: '24px' }}>Contact information</h2>

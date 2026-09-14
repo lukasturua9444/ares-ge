@@ -41,6 +41,14 @@ export default function ContactForm({ t, lang }) {
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
+        // Meta Pixel: Lead fires only on a confirmed send (never for bots caught by the honeypot)
+        if (!form.website && typeof window !== 'undefined' && typeof window.fbq === 'function') {
+          window.fbq('track', 'Lead', {
+            content_name: 'contact_form',
+            content_category: form.projectType || 'unspecified',
+            language: lang === 'ka' ? 'ka' : 'en',
+          });
+        }
         setStatus('success');
         setForm(EMPTY);
         setTouched(false);

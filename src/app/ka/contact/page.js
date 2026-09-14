@@ -1,5 +1,17 @@
 'use client';
 import { useEffect, useState } from 'react';
+import ContactForm from '../../components/ContactForm';
+
+const t = {
+  name: 'თქვენი სახელი', company: 'კომპანია', email: 'ელ. ფოსტა', phone: 'ტელეფონი',
+  selectType: 'აირჩიეთ პროექტის ტიპი',
+  types: { residential: 'საცხოვრებელი კომპლექსი', commercial: 'კომერციული ობიექტი', mixed: 'შერეული დანიშნულების შენობა', public: 'საჯარო შენობა', other: 'სხვა' },
+  message: 'მოგვიყევით თქვენი პროექტის შესახებ',
+  send: 'გაგზავნა', sending: 'იგზავნება',
+  success: 'მადლობა - თქვენი შეტყობინება გაიგზავნა. მალე დაგიბრუნებთ პასუხს',
+  error: 'დაფიქსირდა ხარვეზი და შეტყობინება არ გაიგზავნა. გთხოვთ, სცადოთ თავიდან ან მოგვწეროთ მეილზე info@ares.ge',
+  required: 'გთხოვთ, შეიყვანოთ თქვენი სახელი, სწორი მეილი და თქვენი პროექტის მოკლე აღწერა.',
+};
 
 export default function ContactPageKa() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -62,24 +74,7 @@ export default function ContactPageKa() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'start' }}>
             <div className="anim">
               <h2 className="section-title" style={{ fontSize: '28px', marginBottom: '24px' }}>მოგვწერეთ</h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-                  <input type="text" placeholder="თქვენი სახელი" style={{ padding: '14px 18px', background: 'var(--card)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '14px', color: 'var(--text)', fontFamily: 'var(--font)', outline: 'none', width: '100%' }} />
-                  <input type="text" placeholder="კომპანია" style={{ padding: '14px 18px', background: 'var(--card)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '14px', color: 'var(--text)', fontFamily: 'var(--font)', outline: 'none', width: '100%' }} />
-                </div>
-                <input type="email" placeholder="ელ. ფოსტა" style={{ padding: '14px 18px', background: 'var(--card)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '14px', color: 'var(--text)', fontFamily: 'var(--font)', outline: 'none', width: '100%' }} />
-                <input type="tel" placeholder="ტელეფონი" style={{ padding: '14px 18px', background: 'var(--card)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '14px', color: 'var(--text)', fontFamily: 'var(--font)', outline: 'none', width: '100%' }} />
-                <select style={{ padding: '14px 18px', background: 'var(--card)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '14px', color: 'var(--text2)', fontFamily: 'var(--font)', outline: 'none', width: '100%' }}>
-                  <option value="">აირჩიეთ პროექტის ტიპი</option>
-                  <option value="residential">საცხოვრებელი კომპლექსი</option>
-                  <option value="commercial">კომერციული ობიექტი</option>
-                  <option value="mixed">შერეული დანიშნულების შენობა</option>
-                  <option value="public">საჯარო შენობა</option>
-                  <option value="other">სხვა</option>
-                </select>
-                <textarea placeholder="მოგვიყევით თქვენი პროექტის შესახებ" rows={5} style={{ padding: '14px 18px', background: 'var(--card)', border: '1px solid var(--border)', borderRadius: '6px', fontSize: '14px', color: 'var(--text)', fontFamily: 'var(--font)', outline: 'none', width: '100%', resize: 'vertical' }}></textarea>
-                <button className="btn-primary" style={{ width: 'fit-content' }}>გაგზავნა</button>
-              </div>
+              <ContactForm t={t} lang="ka" />
             </div>
             <div className="anim anim-d2">
               <h2 className="section-title" style={{ fontSize: '28px', marginBottom: '24px' }}>საკონტაქტო ინფორმაცია</h2>

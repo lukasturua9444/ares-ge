@@ -183,11 +183,8 @@ export default function HomeKa() {
         <div className="wrap"><div className="cta-box anim">
           <h2>მზად ხართ შემდეგი პროექტის დასაწყებად?</h2>
           <p>მიიღეთ კონსულტაცია და წინასწარი ხარჯთაღრიცხვა თქვენი პროექტისთვის</p>
-          <div className="cta-form">
-            <input type="text" placeholder="თქვენი სახელი" />
-            <input type="email" placeholder="ელ. ფოსტა ან ტელეფონი" />
-            <input type="text" placeholder="პროექტის ტიპი" />
-            <button type="submit">გამოგზავნეთ მოთხოვნა</button>
+          <div className="cta-form" style={{ justifyContent: 'center' }}>
+            <a href="/ka/contact" style={{ padding: '16px 40px', background: 'var(--black)', color: 'var(--accent)', fontSize: '15px', fontWeight: 600, borderRadius: '6px', textDecoration: 'none', display: 'inline-block', fontFamily: 'var(--font)', transition: 'all 0.3s' }}>დაგვიკავშირდით →</a>
           </div>
         </div></div>
       </section>

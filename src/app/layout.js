@@ -42,6 +42,34 @@ export default function RootLayout({ children }) {
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '2187931008604912');
               fbq('track', 'PageView');
+
+              /* ViewContent on Services / Projects (EN + KA) */
+              (function () {
+                var p = location.pathname.replace(new RegExp('/+$'), '');
+                var m = p.match(new RegExp('^(?:/ka)?/(services|projects)$'));
+                if (m) {
+                  var name = m[1] === 'services' ? 'Services' : 'Projects';
+                  fbq('track', 'ViewContent', {
+                    content_name: name,
+                    content_category: name,
+                    content_type: 'page',
+                    language: p.indexOf('/ka/') === 0 ? 'ka' : 'en'
+                  });
+                }
+              })();
+
+              /* Contact on phone / email link taps (site-wide) */
+              document.addEventListener('click', function (e) {
+                var a = e.target && e.target.closest
+                  ? e.target.closest('a[href^="tel:"], a[href^="mailto:"]')
+                  : null;
+                if (!a) return;
+                var isPhone = a.getAttribute('href').indexOf('tel:') === 0;
+                fbq('track', 'Contact', {
+                  content_name: isPhone ? 'phone' : 'email',
+                  content_category: 'contact_link'
+                });
+              }, true);
             `
           }}
         />

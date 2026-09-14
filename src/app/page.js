@@ -180,11 +180,8 @@ export default function Home() {
         <div className="wrap"><div className="cta-box anim">
           <h2>Ready to start your next project?</h2>
           <p>Get a consultation and preliminary cost estimate for your development</p>
-          <div className="cta-form">
-            <input type="text" placeholder="Your name" />
-            <input type="email" placeholder="Email or phone" />
-            <input type="text" placeholder="Project type" />
-            <button type="submit">Send request</button>
+          <div className="cta-form" style={{ justifyContent: 'center' }}>
+            <a href="/contact" style={{ padding: '16px 40px', background: 'var(--black)', color: 'var(--accent)', fontSize: '15px', fontWeight: 600, borderRadius: '6px', textDecoration: 'none', display: 'inline-block', fontFamily: 'var(--font)', transition: 'all 0.3s' }}>Get in touch →</a>
           </div>
         </div></div>
       </section>
